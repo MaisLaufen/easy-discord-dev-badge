@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discord Bot Launcher</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            max-width: 700px;
+            margin: auto;
+        }
+        input, button {
+            width: 100%;
+            margin: 10px 0;
+            padding: 10px;
+            font-size: 16px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+        }
+        .instruction {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .instruction h2 {
+            margin-top: 0;
+        }
+        .instruction ol {
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Discord Bot Launcher</h1>
+        <form id="botForm">
+            <label for="token">Enter your Bot Token:</label>
+            <input type="text" id="token" name="token" required>
+            <button type="submit">Start Bot</button>
+        </form>
+        <p id="responseMessage"></p>
+        
+        <div class="instruction">
+            <h2>Instructions</h2>
+            <ol>
+                <li>
+                    <strong>Step 4:</strong><br>
+                    Navigate to the Discord Developer Portal, sign in to your account, click New Application and choose any name. Click accept and create. Also head to the Bot section and Add Bot. If that's your first app, you might see the Bot Token. If not, just click on Reset Token and copy it, then store it safely.
+                </li>
+                <li>
+                    <strong>Step 6:</strong><br>
+                    Paste your Discord token by copying it and right-clicking on the application. Some users can also try CTRL + V or CTRL + Shift + V.
+                    <br><strong>IMPORTANT:</strong> DO NOT share the token! Others can use this to log into your account.
+                    <br>Note that to make it respond to your commands, you will need to keep the application/script window alive as it is what runs the bot to begin with. After you're done with everything, you can safely close it.
+                </li>
+                <li>
+                    <strong>Step 7:</strong><br>
+                    When the bot has logged in, copy the invite link given to you by highlighting the URL and right-clicking, then go to a browser and paste the URL to invite the bot to your server. <strong>REPEAT:</strong> Make sure that your server has enabled the Community.
+                </li>
+                <li>
+                    <strong>Step 8:</strong><br>
+                    Within the server, type / and use the /hello command provided to you.
+                </li>
+                <li>
+                    <strong>Step 9:</strong><br>
+                    Go to <a href="https://discord.com/developers/active-developer" target="_blank">this link</a> and claim your badge.<br>
+                    It might take 24 hours before you are able to claim it, so please wait a bit if necessary.
+                </li>
+            </ol>
+        </div>
+    </div>
+
+    <script>
+        const form = document.getElementById("botForm");
+        const responseMessage = document.getElementById("responseMessage");
+
+        form.addEventListener("submit", async (event) => {
+            event.preventDefault();
+            const token = document.getElementById("token").value;
+
+            try {
+                const response = await fetch("http://127.0.0.1:5000/start-bot", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({ token })
+                });
+
+                const data = await response.json();
+                responseMessage.textContent = data.message;
+            } catch (error) {
+                responseMessage.textContent = "An error occurred: " + error.message;
+            }
+        });
+    </script>
+</body>
+</html>
