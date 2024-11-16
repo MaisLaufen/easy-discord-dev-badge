@@ -5,46 +5,171 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Discord Bot Launcher</title>
     <style>
-        body {
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            background-color: #000000;
+            color: #ffffff;
             font-family: Arial, sans-serif;
-            margin: 20px;
         }
+
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+
         .container {
             max-width: 700px;
-            margin: auto;
+            margin: 50px auto;
+            padding: 20px;
+            flex: 1; /* Заполнение оставшегося пространства */
         }
-        input, button {
-            width: 100%;
-            margin: 10px 0;
+
+        header {
+            background-color: #353535;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 3px solid #4CAF50;
+        }
+
+        header img {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        header h1 {
+            color: #ffffff;
+            margin: 0;
+            font-size: 24px;
+            text-align: center;
+        }
+
+        form {
+            background-color: #1a1a1a;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        form label {
+            display: block;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        input {
+            width: calc(100% - 22px);
+            margin-bottom: 15px;
             padding: 10px;
             font-size: 16px;
+            border: 1px solid #555555;
+            border-radius: 5px;
+            background-color: #262626;
+            color: #ffffff;
         }
+
         button {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
             background-color: #4CAF50;
-            color: white;
+            color: #ffffff;
             border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
         }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
         .instruction {
-            margin-top: 20px;
+            margin-top: 30px;
             padding: 20px;
-            background-color: #f9f9f9;
+            background-color: #1a1a1a;
             border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
         }
+
         .instruction h2 {
             margin-top: 0;
+            color: #4CAF50;
         }
+
         .instruction ol {
             padding-left: 20px;
+        }
+
+        .instruction li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+
+        .instruction a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+
+        .instruction a:hover {
+            text-decoration: underline;
+        }
+
+        #responseMessage {
+            margin-top: 30px;
+            font-size: 16px;
+            text-align: center;
+        }
+
+        .success {
+            color: #4CAF50;
+        }
+
+        .error {
+            color: #FF5722;
+        }
+
+        .success a {
+            color: #4CAF50;
+            text-decoration: underline;
+        }
+
+        .success a:hover {
+            color: #45a049;
+        }
+
+        footer {
+            background-color: #353535;
+            color: #ffffff;
+            text-align: center;
+            padding: 10px 0;
+            font-size: 14px;
+            border-top: 3px solid #4CAF50;
+        }
+
+        footer a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
+    <header>
+        <img src="https://cdn-icons-png.flaticon.com/512/906/906343.png" alt="Discord Icon">
+        <h1>Easy Discord Dev Badge</h1>
+    </header>
     <div class="container">
-        <h1>Discord Bot Launcher</h1>
         <form id="botForm">
             <label for="token">Enter your Bot Token:</label>
-            <input type="text" id="token" name="token" required>
+            <input type="text" id="token" name="token" placeholder="Paste your token here..." required>
             <button type="submit">Start Bot</button>
         </form>
         <p id="responseMessage"></p>
@@ -52,32 +177,18 @@
         <div class="instruction">
             <h2>Instructions</h2>
             <ol>
-                <li>
-                    <strong>Step 4:</strong><br>
-                    Navigate to the Discord Developer Portal, sign in to your account, click New Application and choose any name. Click accept and create. Also head to the Bot section and Add Bot. If that's your first app, you might see the Bot Token. If not, just click on Reset Token and copy it, then store it safely.
-                </li>
-                <li>
-                    <strong>Step 6:</strong><br>
-                    Paste your Discord token by copying it and right-clicking on the application. Some users can also try CTRL + V or CTRL + Shift + V.
-                    <br><strong>IMPORTANT:</strong> DO NOT share the token! Others can use this to log into your account.
-                    <br>Note that to make it respond to your commands, you will need to keep the application/script window alive as it is what runs the bot to begin with. After you're done with everything, you can safely close it.
-                </li>
-                <li>
-                    <strong>Step 7:</strong><br>
-                    When the bot has logged in, copy the invite link given to you by highlighting the URL and right-clicking, then go to a browser and paste the URL to invite the bot to your server. <strong>REPEAT:</strong> Make sure that your server has enabled the Community.
-                </li>
-                <li>
-                    <strong>Step 8:</strong><br>
-                    Within the server, type / and use the /hello command provided to you.
-                </li>
-                <li>
-                    <strong>Step 9:</strong><br>
-                    Go to <a href="https://discord.com/developers/active-developer" target="_blank">this link</a> and claim your badge.<br>
-                    It might take 24 hours before you are able to claim it, so please wait a bit if necessary.
-                </li>
+                <li><strong>Step 4:</strong><br>Navigate to the Discord Developer Portal, create a new application, and set up your bot.</li>
+                <li><strong>Step 6:</strong><br>Paste your Discord token and make sure not to share it!</li>
+                <li><strong>Step 7:</strong><br>Invite the bot to your server using the provided URL.</li>
+                <li><strong>Step 8:</strong><br>Test the bot with the /hello command in your server.</li>
+                <li><strong>Step 9:</strong><br>Claim your badge <a href="https://discord.com/developers/active-developer" target="_blank">here</a>.</li>
             </ol>
         </div>
     </div>
+
+    <footer>
+        Repository - <a href="https://github.com/MaisLaufen/easy-discord-dev-badge" target="_blank">https://github.com/MaisLaufen/easy-discord-dev-badge</a>
+    </footer>
 
     <script>
         const form = document.getElementById("botForm");
@@ -97,9 +208,17 @@
                 });
 
                 const data = await response.json();
-                responseMessage.textContent = data.message;
+                if (data.message.startsWith("Success")) {
+                    const urlMatch = data.message.match(/https?:\/\/[^\s]+/);
+                    const inviteLink = urlMatch ? `<a href="${urlMatch[0]}" target="_blank">${urlMatch[0]}</a>` : '';
+                    responseMessage.innerHTML = `<span class="success">${data.message.replace(urlMatch ? urlMatch[0] : '', inviteLink)}</span>`;
+                } else {
+                    responseMessage.textContent = data.message;
+                    responseMessage.className = "error";
+                }
             } catch (error) {
                 responseMessage.textContent = "An error occurred: " + error.message;
+                responseMessage.className = "error";
             }
         });
     </script>
