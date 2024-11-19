@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Discord Bot Launcher</title>
+    <title>Easy discord developer badge</title>
     <link rel="icon" href="https://raw.githubusercontent.com/MaisLaufen/easy-discord-dev-badge/refs/heads/master/assets/static/easy_discord_badge_logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap" rel="stylesheet">
     <style>
         html, body {
             margin: 0;
@@ -12,7 +13,7 @@
             height: 100%;
             background-color: #2B2D31;
             color: #ffffff;
-            font-family: Arial, sans-serif;
+            font-family: 'Jost', Arial, sans-serif;
         }
 
         body {
@@ -98,7 +99,8 @@
 
         .instruction h2 {
             margin-top: 0;
-            color: #5865F2;
+            color: #ffffff;
+            text-align: center;
         }
 
         .instruction ol {
@@ -106,23 +108,31 @@
         }
 
         .instruction li {
-            margin-bottom: 10px;
+            margin-bottom: 15px;
             line-height: 1.6;
         }
 
-        .instruction a {
+        .instruction li strong {
+            color: #ffffff;
+        }
+
+        .instruction li a {
             color: #5865F2;
             text-decoration: none;
         }
 
-        .instruction a:hover {
+        .instruction li a:hover {
             text-decoration: underline;
         }
 
-        #responseMessage {
-            margin-top: 30px;
-            font-size: 16px;
-            text-align: center;
+        .instruction ul {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            padding-left: 20px;
+        }
+
+        .error {
+            color: #FF4D4D;
         }
 
         .success a {
@@ -154,26 +164,32 @@
 </head>
 <body>
     <header>
-        <img src="https://raw.githubusercontent.com/MaisLaufen/easy-discord-dev-badge/refs/heads/master/assets/static/easy_discord_badge_logo.png" alt="Discord Icon">
+        <img src="https://raw.githubusercontent.com/MaisLaufen/easy-discord-dev-badge/refs/heads/master/assets/static/easy_discord_badge_logo.png" alt="Easy Discord Dev Badge">
         <h1>Easy Discord Dev Badge</h1>
     </header>
     <div class="container">
         <form id="botForm">
-            <label for="token">Enter your Bot Token:</label>
+            <label for="token">Enter your Bot Token here:</label>
             <input type="text" id="token" name="token" placeholder="Paste your token here..." required>
-            <button type="submit">Start Bot</button>
+            <button type="submit">Get Invite Link</button>
         </form>
         <p id="responseMessage"></p>
         
         <div class="instruction">
             <h2>Instructions</h2>
-            <ol>
-                <li><strong>Step 4:</strong><br>Navigate to the Discord Developer Portal, create a new application, and set up your bot.</li>
-                <li><strong>Step 6:</strong><br>Paste your Discord token and make sure not to share it!</li>
-                <li><strong>Step 7:</strong><br>Invite the bot to your server using the provided URL.</li>
-                <li><strong>Step 8:</strong><br>Test the bot with the /hello command in your server.</li>
-                <li><strong>Step 9:</strong><br>Claim your badge <a href="https://discord.com/developers/active-developer" target="_blank">here</a>.</li>
-            </ol>
+            <ul>
+                <li><strong>Step 1:</strong><br>Make sure you run the file <span style="background-color: #1E242A; padding: 0 4px; border-radius: 4px;">local_server.exe</span>. Otherwise, the bot will not work.</li>
+                <li><strong>Step 2:</strong><br>Navigate to the <a href="https://discord.com/developers/applications" target="_blank">Discord Developer Portal</a>, and create new application. You can use any name for it.</li>
+                <li><strong>Step 3:</strong><br>Go to <span style="background-color: #1E242A; padding: 0 4px; border-radius: 4px;">Bot section</span> and add new bot.</li>
+                <li><strong>Step 4:</strong><br>Click on <span style="background-color: #1E242A; padding: 0 4px; border-radius: 4px;">Reset Token</span> and copy it. <span style="background-color: #1E242A; padding: 0 4px; border-radius: 4px;">Don't share it</span> with anyone! With it, your account can be stolen.</li>
+                <li><strong>Step 5:</strong><br>Paste your token in the <span style="background-color: #1E242A; padding: 0 4px; border-radius: 4px;">TextBox</span> on this page. Then press <span style="background-color: #1E242A; padding: 0 4px; border-radius: 4px;">Get Invite Link</span> button.</li>
+                <li><strong>Step 6:</strong><br>Create new server and enable <span style="background-color: #1E242A; padding: 0 4px; border-radius: 4px;">Community</span> on it.</li>
+                <li><strong>Step 7:</strong><br>If token is correct, you will get <span style="background-color: #1E242A; padding: 0 4px; border-radius: 4px;">invite link</span>. Copy it and paste in your browser, and invite bot to your server.</li>
+                <li><strong>Step 8:</strong><br>Within the server, <span style="background-color: #1E242A; padding: 0 4px; border-radius: 4px;">use /hello command</span> in any chat.</li>
+                <li><strong>Step 9:</strong><br>Claim your badge <a href="https://discord.com/developers/active-developer" target="_blank">here</a>.
+                    <br><i style="color: #888;">It might take 24 hours before you are able to claim at all.</i>
+                </li>            
+            </ul>
         </div>
     </div>
 
