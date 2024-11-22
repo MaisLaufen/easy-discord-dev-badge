@@ -16,8 +16,8 @@
    - `local_server.exe` to run a local server with a bot for Discord.  
 
 After downloading, follow these steps:
-1. Run `local_server.exe `.
-2. Open the `index.html `in the browser.
+1. Run `local_server.exe`.
+2. Open the `index.html`in the browser.
 3. Follow the instructions on the browser page.
 
 ---
