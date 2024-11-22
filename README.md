@@ -26,12 +26,14 @@ After downloading, follow these steps:
 
 1. Make sure that you have **Python 3.9+** installed. Download it from [the official Python website](https://www.python.org/downloads/release/python-390/).
 2. Install the dependencies using the following command in the terminal:
+
    ```bash
    pip install -r requirements.txt
    ```
-3. Open the file folder `local_server.py `in the terminal.
+3. Open the file folder `local_server.py` in the terminal.
 4. Start the local server:
+
    ```bash
    python local_server.py
    ```
-5. Open the file `index.html ` in the browser and follow the instructions on the page.
+5. Open the file `index.html` in the browser and follow the instructions on the page.
