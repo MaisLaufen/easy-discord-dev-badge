@@ -86,7 +86,7 @@
         }
 
         button:hover {
-            background-color: #4751c9;
+            background-color: #323b9e;
         }
 
         .instruction {
@@ -145,7 +145,7 @@
 }
 
 .invite-link:hover {
-    color: #45a049;
+    color: #808bff;
 }
 
         footer {
@@ -249,7 +249,7 @@
             responseMessage.className = "error";
         }
     } catch (error) {
-        responseMessage.textContent = "An error occurred: " + error.message;
+        responseMessage.textContent = "An error occurred: probably you not start the local_server.exe or Discord is banned in your country. If so, you can use VPN.";
         responseMessage.className = "error";
     } finally {
         loadingSpinner.style.display = "none";
