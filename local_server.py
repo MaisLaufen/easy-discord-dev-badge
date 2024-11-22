@@ -17,7 +17,7 @@ class MyBot(discord.Client):
         self.tree = app_commands.CommandTree(self)
 
     async def on_ready(self):
-        print(f"Logged in as {self.user} (ID: {self.user.id})")
+        print(f"Logged app: {self.user}")
         print("------")
         # Синхронизация команд
         await self.tree.sync()
@@ -30,13 +30,12 @@ discord_bot = MyBot(intents=intents)
 @discord_bot.tree.command()
 async def hello(interaction: discord.Interaction):
     """Print in chat"""
-    print(f"> {interaction.user} used /hello command.")
+    print(f"> You used /hello command. Now you can close this by pressing Ctrl + C.")
 
     # Response in discord channel
     await interaction.response.send_message(inspect.cleandoc(f"""
-        Hi **{interaction.user}**, Hello World!
+        **{interaction.user}** just said Hello, World!
         Now you can go to step 9.
-        And please, end my suffering by /shutdown command =(
     """))
 
 @discord_bot.tree.command()
