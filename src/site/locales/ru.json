@@ -1,28 +1,28 @@
 {
-  "title": "Значок Discord разработчика",
-  "label_token": "Введите токен вашего бота:",
+  "title": "Легкое получение значка разработчика Discord",
+  "label_token": "Вставьте токен вашего бота ниже:",
   "button_get_link": "Получить ссылку на приглашение",
-  "placeholder_token": "Вставьте ваш токен сюда...",
+  "placeholder_token": "Вставьте токен вашего бота сюда...",
   "instructions_header": "Инструкция",
   "step_label": "Шаг",
   "footer": "Репозиторий",
   "steps": [
-    "Запустите файл local_server.exe. Иначе бот не заработает.",
-    "Перейдите в Discord Developer Portal и создайте новое приложение.",
-    "Добавьте нового бота в разделе Bot.",
-    "Сбросьте токен и скопируйте его. Не делитесь им!",
-    "Вставьте токен на странице и нажмите кнопку.",
-    "Создайте сервер и включите Сообщество.",
-    "Используйте ссылку, чтобы пригласить бота.",
-    "Воспользуйтесь командой /hello в сервере.",
-    "Заберите свой бейдж здесь (может занять 24ч)."
+     "Убедитесь, что вы запустили <span style=\"background-color: #1E242A; padding: 0 4px; border-radius: 4px;\">local_server.exe</span>. Иначе, бот не запустится.",
+    "Перейдите на <a href=\"https://discord.com/developers/applications\" target=\"_blank\">Портал Разработчиков Discord</a>, и создайте новое application. Вы можете дать ему любое название.",
+    "Перейдите в <span style=\"background-color: #1E242A; padding: 0 4px; border-radius: 4px;\">секцию 'Bot'</span> и добавьте нового бота.",
+    "Нажмите на <span style=\"background-color: #1E242A; padding: 0 4px; border-radius: 4px;\">Reset Token</span> и скопируйте токен. <span style=\"background-color: #1E242A; padding: 0 4px; border-radius: 4px;\">Не отправляйте его</span> никому! С его помощью ваш аккаунт может быть украден.",
+    "Вставьте ваш токен в <span style=\"background-color: #1E242A; padding: 0 4px; border-radius: 4px;\">текстовое поле</span> на странице. Затем нажмите кнопку <span style=\"background-color: #1E242A; padding: 0 4px; border-radius: 4px;\">'Получить ссылку на приглашение'</span>.",
+    "Создайте новый сервер и включите <span style=\"background-color: #1E242A; padding: 0 4px; border-radius: 4px;\">Community</span> на нём.",
+    "Если токен корректен, вы получите <span style=\"background-color: #1E242A; padding: 0 4px; border-radius: 4px;\">Ссылку с приглашением</span>. Скопируйте её и вставьте в любой браузер, затем пригласите бота на ваш только что созданный сервер.",
+    "На сервере, <span style=\"background-color: #1E242A; padding: 0 4px; border-radius: 4px;\">используйте команду /hello</span> в любом канале/чате.",
+    "Получите свой значок разработчика <a href=\"https://discord.com/developers/active-developer\" target=\"_blank\">здесь</a>.<br><i style=\"color: #888;\"> Может пройти около 24 часов до того, как вы сможете получить его.</i>"
   ],
   "errors": {
-    "token_required": "Токен обязателен.",
-    "auth_failed": "Не удалось авторизовать токен. Проверьте правильность.",
-    "discord_api_unreachable": "Нет доступа к Discord API. Попробуйте использовать VPN.",
-    "unknown": "Произошла неизвестная ошибка.",
-    "network": "Ошибка сети. Сервер запущен?",
-    "empty_token": "Пожалуйста, введите токен бота."
+    "token_required": "Необходим токен.",
+    "auth_failed": "Не удалось аутентифицировать токен бота. Убедитесь, что он введен правильно.",
+    "discord_api_unreachable": "Не удается подключиться к Discord API. Проверьте подключение к интернету и включенный zapret (без обхода получить значок не получится =( )",
+    "unknown": "Возникла неизвестная ошибка.",
+    "network": "Ошибка сети. У вас точно есть интернет и вы включили сервер?",
+    "empty_token": "Пожалуйста, вставьте токен вашего бота."
   }
 }
