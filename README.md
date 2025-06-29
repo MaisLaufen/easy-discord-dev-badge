@@ -1,31 +1,60 @@
-# Easy Discord Dev Badge
-![Repository banner](assets/github/easy_discord_dev_badge_banner.png)
+<h1 align="center">Easy Discord Dev Badge</h1>
 
-## 📖 Description  
+<p align="center">
+  <img src="https://github.com/MaisLaufen/easy-discord-dev-badge/blob/master/src/site/assets/img/logo.png" alt="Easy Discord Dev Badge Banner" />
+</p>
 
-**Easy Discord Dev Badge** — a tool that makes it easier to get an developer badge in Discord. With it, you can automate the process, minimize effort, and get an badge in a few steps.
+<p align="center">
+  <a href="https://github.com/MaisLaufen/easy-discord-dev-badge/releases">
+    <img src="https://img.shields.io/github/v/release/MaisLaufen/easy-discord-dev-badge?style=for-the-badge&label=Latest%20Release" alt="Latest Release" />
+  </a>
+</p>
 
 ---
 
-## 🚀 Installation  
+## 📖 Description
 
-1. Go to the [Releases](https://github.com/MaisLaufen/easy-discord-dev-badge/releases) section.
-2. Download the latest version (recommended) or any other available one.
-3. Download the following files from the Release Assets:
-   - `index.html` to launch the interface.
-   - `local_server.exe` to run a local server with a bot for Discord.  
+**Easy Discord Dev Badge** is a tool that simplifies the process of obtaining the **Developer Badge** on Discord. It automates the workflow, minimizes effort, and helps you complete the requirements in just a few guided steps.
 
-After downloading, follow these steps:
+---
+
+## ✨ Features
+
+- 🌐 Multi-language support (English 🇬🇧 / Russian 🇷🇺)
+- ⚙️ Optimized local bot server
+- 🧹 Console with the local server closes automatically after completion
+- 💻 Improved, modern interface
+- 📁 Standard site structure instead of a single-file HTML
+
+---
+
+## 🚀 Installation (Recommended)
+
+1. Go to the [Releases](https://github.com/MaisLaufen/easy-discord-dev-badge/releases) page.
+2. Download the archive file: **`easy-discord-dev-badge.zip`** from the latest release.
+3. Extract the contents of the archive to any folder on your computer.
+
+   The archive contains:
+   - `local_server.exe` — the executable that runs the local bot server
+   - `site/` folder — the web interface and all required frontend files
+
+> ⚠️ **Important:** Do not change the folder structure!  
+> `local_server.exe` must remain in the same folder level as the `site/` folder for everything to work properly.
+
+---
+
+### ✅ How to use
+
 1. Run `local_server.exe`.
-2. Open the `index.html`in the browser.
-3. Follow the instructions on the browser page.
+2. Your default browser will **automatically open** the site.
+3. Follow the instructions displayed on the page.
 
 ---
 
-## 🔧 Independent installation 
+## 🛠 Manual Setup (Python)
 
-1. Make sure that you have **Python 3.9+** installed. Download it from [the official Python website](https://www.python.org/downloads/release/python-390/).
-2. Install the dependencies using the following command in the terminal:
+1. Make sure you have **Python 3.9+** installed. You can download it from [python.org](https://www.python.org/downloads/release/python-390/).
+2. Install the dependencies:
 
    ```bash
    pip install -r requirements.txt
@@ -36,4 +65,3 @@ After downloading, follow these steps:
    ```bash
    python local_server.py
    ```
-5. Open the file `index.html` in the browser and follow the instructions on the page.
