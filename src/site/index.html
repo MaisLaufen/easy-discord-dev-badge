@@ -9,18 +9,41 @@
 </head>
 <body>
   <header>
-    <img src="assets/img/logo.png" alt="Logo" />
-    <h1 data-i18n="title"></h1>
+     <div id="empty-left"></div>
+    <div id="logo-title-container">
+      <img src="assets/img/logo.png" alt="Logo" />
+      <h1 data-i18n="title"></h1>
+    </div>
+    <div id="language-container">
+      <div class="custom-select" id="language-selector">
+        <div class="selected">
+          <img src="assets/img/flags/britain.png" alt="English" />
+          <span>English</span>
+        </div>
+        <div class="options">
+          <div data-lang="en">
+            <img src="assets/img/flags/britain.png" alt="English" />
+            <span>English</span>
+          </div>
+          <div data-lang="ru">
+            <img src="assets/img/flags/russia.png" alt="Русский" />
+            <span>Русский</span>
+          </div>
+        </div>
+      </div>
+    </div>
   </header>
 
   <div class="container">
     <form id="botForm">
       <label for="token" data-i18n="label_token"></label>
       <input type="text" id="token" name="token" data-i18n-placeholder="placeholder_token" required />
-      <button type="submit" data-i18n="button_get_link"></button>
+      <button type="submit" data-i18n="button_get_link">
+        <span class="button-text">Get Invite Link</span>
+        <span class="button-spinner spinner" style="display: none;"></span>
+      </button>
     </form>
     <p id="responseMessage"></p>
-    <div id="loadingSpinner" class="spinner" style="display: none;"></div>
 
     <div class="instruction">
       <h2 data-i18n="instructions_header"></h2>
@@ -32,11 +55,6 @@
     <span data-i18n="footer"></span> —
     <a href="https://github.com/MaisLaufen/easy-discord-dev-badge" target="_blank">GitHub</a>
   </footer>
-
-  <select id="language-switcher">
-    <option value="en">English</option>
-    <option value="ru">Русский</option>
-  </select>
 
   <script src="js/main.js"></script>
 </body>
