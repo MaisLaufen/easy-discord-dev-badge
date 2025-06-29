@@ -35,7 +35,7 @@ async def hello(interaction: Interaction):
     await interaction.response.send_message(inspect.cleandoc(f"""
         **{interaction.user}** just said Hello, World!
         ✅ You can now go to step 9.
-        The local server was shut down automatically..
+        The local server was shut down automatically.
     """))
 
     await discord_bot.close()
