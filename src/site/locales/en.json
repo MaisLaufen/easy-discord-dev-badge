@@ -2,18 +2,27 @@
   "title": "Easy Discord Dev Badge",
   "label_token": "Enter your Bot Token here:",
   "button_get_link": "Get Invite Link",
+  "placeholder_token": "Paste your token here...",
   "instructions_header": "Instructions",
-  "step_prefix": "Step",
+  "step_label": "Step",
   "footer": "Repository",
   "steps": [
-    "Make sure you run the file local_server.exe. Otherwise, the bot will not work.",
-    "Go to Discord Developer Portal and create new application.",
-    "Add new bot in the Bot section.",
-    "Reset Token and copy it. Don’t share it with anyone!",
-    "Paste your token on this page and press the button.",
-    "Create a server and enable Community.",
-    "Use the invite link to invite the bot.",
-    "Use /hello command in your server.",
-    "Claim your badge here (might take 24h)."
-  ]
+     "Make sure you run the file <span style=\"background-color: #1E242A; padding: 0 4px; border-radius: 4px;\">local_server.exe</span>. Otherwise, the bot will not work.",
+    "Navigate to the <a href=\"https://discord.com/developers/applications\" target=\"_blank\">Discord Developer Portal</a>, and create new application. You can use any name for it.",
+    "Go to <span style=\"background-color: #1E242A; padding: 0 4px; border-radius: 4px;\">Bot section</span> and add new bot.",
+    "Click on <span style=\"background-color: #1E242A; padding: 0 4px; border-radius: 4px;\">Reset Token</span> and copy it. <span style=\"background-color: #1E242A; padding: 0 4px; border-radius: 4px;\">Don't share it</span> with anyone! With it, your account can be stolen.",
+    "Paste your token in the <span style=\"background-color: #1E242A; padding: 0 4px; border-radius: 4px;\">TextBox</span> on this page. Then press <span style=\"background-color: #1E242A; padding: 0 4px; border-radius: 4px;\">Get Invite Link</span> button.",
+    "Create new server and enable <span style=\"background-color: #1E242A; padding: 0 4px; border-radius: 4px;\">Community</span> on it.",
+    "If token is correct, you will get <span style=\"background-color: #1E242A; padding: 0 4px; border-radius: 4px;\">invite link</span>. Copy it and paste in your browser, and invite bot to your server.",
+    "Within the server, <span style=\"background-color: #1E242A; padding: 0 4px; border-radius: 4px;\">use /hello command</span> in any chat.",
+    "Claim your badge <a href=\"https://discord.com/developers/active-developer\" target=\"_blank\">here</a>.<br><i style=\"color: #888;\">It might take 24 hours before you are able to claim at all.</i>"
+  ],
+  "errors": {
+    "token_required": "Token is required.",
+    "auth_failed": "Failed to authenticate bot token. Make sure it's correct.",
+    "discord_api_unreachable": "Cannot connect to Discord API. Try using VPN.",
+    "unknown": "An unexpected error occurred.",
+    "network": "Network error. Is the server running?",
+    "empty_token": "Please enter a bot token."
+  }
 }

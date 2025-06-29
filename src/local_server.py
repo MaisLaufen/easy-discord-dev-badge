@@ -55,7 +55,9 @@ def start_bot():
         token = data.get("token")
 
         if not token:
-            return jsonify({"message": "Token is required"}), 400
+            return jsonify({
+                "error_code": "token_required"
+            }), 400
 
         r = requests.get(
             "https://discord.com/api/v10/users/@me",
@@ -71,16 +73,23 @@ def start_bot():
                 bot_token = token
                 threading.Thread(target=run_discord_bot, args=(bot_token,), daemon=True).start()
 
-            return jsonify({"message": f"Success! Invite your bot using this link: {invite_link}"})
+            return jsonify({
+                "message": f"Success! Invite your bot using this link: {invite_link}"
+            })
         else:
-            error_data = r.json()
-            return jsonify({"message": f"Failed to authenticate bot token (check it if it's right): {error_data.get('message', 'Unknown error')}"}), 400
+            return jsonify({
+                "error_code": "auth_failed"
+            }), 400
 
-    except requests.exceptions.RequestException as e:
-        return jsonify({"message": f"Error connecting to Discord API: {str(e)}"}), 500
+    except requests.exceptions.RequestException:
+        return jsonify({
+            "error_code": "discord_api_unreachable"
+        }), 500
 
-    except Exception as e:
-        return jsonify({"message": f"An unexpected error occurred: {str(e)}"}), 500
+    except Exception:
+        return jsonify({
+            "error_code": "unknown"
+        }), 500
 
 @app.route("/")
 def index():

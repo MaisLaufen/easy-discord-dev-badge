@@ -3,33 +3,33 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title data-i18n="title">Easy Discord Dev Badge</title>
+  <title data-i18n="title"></title>
   <link rel="icon" href="assets/img/logo.png" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
     <img src="assets/img/logo.png" alt="Logo" />
-    <h1 data-i18n="title">Easy Discord Dev Badge</h1>
+    <h1 data-i18n="title"></h1>
   </header>
 
   <div class="container">
     <form id="botForm">
-      <label for="token" data-i18n="label_token">Enter your Bot Token here:</label>
-      <input type="text" id="token" name="token" placeholder="Paste your token here..." required />
-      <button type="submit" data-i18n="button_get_link">Get Invite Link</button>
+      <label for="token" data-i18n="label_token"></label>
+      <input type="text" id="token" name="token" data-i18n-placeholder="placeholder_token" required />
+      <button type="submit" data-i18n="button_get_link"></button>
     </form>
     <p id="responseMessage"></p>
     <div id="loadingSpinner" class="spinner" style="display: none;"></div>
 
     <div class="instruction">
-      <h2 data-i18n="instructions_header">Instructions</h2>
+      <h2 data-i18n="instructions_header"></h2>
       <ul id="instruction-list"></ul>
     </div>
   </div>
 
   <footer>
-    <span data-i18n="footer">Repository</span> —
+    <span data-i18n="footer"></span> —
     <a href="https://github.com/MaisLaufen/easy-discord-dev-badge" target="_blank">GitHub</a>
   </footer>
 
