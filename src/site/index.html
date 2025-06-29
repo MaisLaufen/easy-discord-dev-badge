@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title data-i18n="title">Easy Discord Dev Badge</title>
+  <link rel="icon" href="assets/easy_discord_badge_logo.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <img src="assets/easy_discord_badge_logo.png" alt="Logo" />
+    <h1 data-i18n="title">Easy Discord Dev Badge</h1>
+  </header>
+
+  <div class="container">
+    <form id="botForm">
+      <label for="token" data-i18n="label_token">Enter your Bot Token here:</label>
+      <input type="text" id="token" name="token" placeholder="Paste your token here..." required />
+      <button type="submit" data-i18n="button_get_link">Get Invite Link</button>
+    </form>
+    <p id="responseMessage"></p>
+    <div id="loadingSpinner" class="spinner" style="display: none;"></div>
+
+    <div class="instruction">
+      <h2 data-i18n="instructions_header">Instructions</h2>
+      <ul id="instruction-list"></ul>
+    </div>
+  </div>
+
+  <footer>
+    <span data-i18n="footer">Repository</span> —
+    <a href="https://github.com/MaisLaufen/easy-discord-dev-badge" target="_blank">GitHub</a>
+  </footer>
+
+  <select id="language-switcher">
+    <option value="en">English</option>
+    <option value="ru">Русский</option>
+  </select>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

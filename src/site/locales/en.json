@@ -1,0 +1,19 @@
+{
+  "title": "Easy Discord Dev Badge",
+  "label_token": "Enter your Bot Token here:",
+  "button_get_link": "Get Invite Link",
+  "instructions_header": "Instructions",
+  "step_prefix": "Step",
+  "footer": "Repository",
+  "steps": [
+    "Make sure you run the file local_server.exe. Otherwise, the bot will not work.",
+    "Go to Discord Developer Portal and create new application.",
+    "Add new bot in the Bot section.",
+    "Reset Token and copy it. Don’t share it with anyone!",
+    "Paste your token on this page and press the button.",
+    "Create a server and enable Community.",
+    "Use the invite link to invite the bot.",
+    "Use /hello command in your server.",
+    "Claim your badge here (might take 24h)."
+  ]
+}
